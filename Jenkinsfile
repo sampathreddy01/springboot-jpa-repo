@@ -16,18 +16,7 @@ pipeline {
        }
    	}
 	
-	/*
-	stage('Publish Test Coverage Report') {
-         steps {
-           step([$class: 'JacocoPublisher', 
-                execPattern: '**/build/jacoco/*.exec',
-                classPattern: '**/build/classes',
-                sourcePattern: 'src/main/java',
-                exclusionPattern: 'src/test*'
-                ])
-            }
-        }
-        */
+	
         
     stage('Jacoco Coverage Report') {
         steps{
@@ -41,6 +30,7 @@ pipeline {
 		 -Dsonar.host.url=http://localhost:9000 \
  		-Dsonar.login=9384a2658e9c09b92823e7758c88a0d7558b87d1'''
           }
+	}
 	
 	stage('Maven Package'){
 		steps{
