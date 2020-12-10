@@ -27,8 +27,8 @@ pipeline {
 	stage('SonarQube'){
          steps{
             bat label: '', script: '''mvn sonar:sonar \
-		 -Dsonar.host.url=http://localhost:9000 \
- 		-Dsonar.login=f7124b0b0d82301ab15bd87e3987da453beb0f05'''
+		 -Dsonar.host.url=http://localhost:9001 \
+ 		-Dsonar.login=6d886f078d203e2a158bd2524d7dc06332260471'''
           }
 	}
 	
